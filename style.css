@@ -1,0 +1,217 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body{
+
+  background-image: linear-gradient(to right top, #1a1919 45%, #010144);
+  color: #ffffff;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  gap: 40px;
+  
+}
+
+p
+{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 2em;
+  font-weight: 700;
+  color: #3c97a7;    
+}
+
+
+.inputBox
+{
+  position: relative;
+  width: 350px;
+  padding-top: 20px;
+}
+
+.inputBox input
+{
+  background: transparent;
+  width: 100%;
+  border: none;
+  color: #3c97a7;
+  font-size: 1.09em;
+  outline: none;
+  box-shadow: none; 
+  padding: 10px 0 5px;
+  letter-spacing: 0.1em;
+
+}
+
+.inputBox span
+{
+  position: absolute;
+  left: 0;
+  padding: 10px 0 5px;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  pointer-events: none;
+  letter-spacing: 0.1em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span
+{
+  color: #3c97a7;
+  transform: translatey(-16px);
+  font-size: 0.65em;
+}
+
+.inputBox i 
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: gray;
+  overflow: hidden;
+  
+}
+
+.inputBox i::before
+{
+  content: '';
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3c97a7, #446fff, #3c97a7);
+  animation: animate 1s linear infinite;
+
+}
+
+.inputBox input:valid ~ i::before,
+.inputBox input:focus ~ i::before
+{
+  left: 0;
+}
+
+.check
+{
+  width: 101px;
+  margin-top: 13PX;  
+}
+
+#checkBoxcolor:checked
+{
+  -webkit-appearance:none;
+  background-color: #3c97a7;
+  border: 3px solid #ffffff;
+  width: 13px;
+  height: 13px;
+}
+
+.check:hover
+{
+  
+  color:#3c97a7;
+}
+
+.link a
+{
+  position: relative;
+  left: 213px;
+  bottom: 18px;
+  margin-top: -18px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.link a:hover
+{
+  color: #3c97a7;
+}
+
+.conta{
+  position: absolute;
+  bottom: 220px;
+  left: 290px;  
+}
+
+.conta a {
+  text-decoration: none;
+  color: white;
+}
+
+form
+{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.031);
+  width: 400px;
+  height: 500px;   
+  border: 2px solid #003441;  
+  padding: 20px;
+  
+}
+
+.btn
+{
+  position: relative;
+  background-color: #3c97a7;
+  width: 100%;
+  height: 40px;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #000000;
+  margin-top: 20px;
+  left: 50%;
+  border: none;
+  border-radius: 10px;
+  transform: translate(-50%, 50%);
+  cursor: pointer; 
+  transition: 0.2s; 
+}
+
+.btn:hover
+{
+  background-color: rgba(60, 151, 167, 0.031);
+  transition: 0.2s;
+  color: #3c97a7;
+  border: 1px solid #ffffff;
+}
+
+.conta
+{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 123px;
+}
+
+.conta a:hover
+{
+  color: #3c97a7;
+  text-decoration:underline;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes animate
+{
+  0%
+  {
+    background-position-x: 0;
+  }
+  100%
+  {
+    background-position-x: 350px;
+  }
+}
+
+/* END ANIMATIONS */
