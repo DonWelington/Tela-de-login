@@ -2,7 +2,7 @@
 
 
 
-![](C:\Users\welin\Desktop\login\image\imagem1.gif)
+![](https://raw.githubusercontent.com/DonWelington/Tela-de-login/main/imagem1.gif)
 
 
 
